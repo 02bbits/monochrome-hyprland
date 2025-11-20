@@ -4,8 +4,8 @@ tmp_dir="/tmp/cliphist"
 rm -rf "$tmp_dir"
 
 if [[ -n "$1" ]]; then
-  cliphist decode <<<"$1" | wl-copy
-  exit
+    cliphist decode <<<"$1" | wl-copy
+    exit
 fi
 
 mkdir -p "$tmp_dir"
@@ -19,4 +19,4 @@ match(\$0, /^([0-9]+)\s(\[\[\s)?binary.*(jpg|jpeg|png|bmp)/, grp) {
 }
 1
 EOF
-cliphist list | gawk "$prog" | rofi -dmenu -c $HOME/.config/rofi/clipboard.rasi -show-icons -markup-rows -display-columns 2 | cliphist decode | wl-copy
+cliphist list | gawk "$prog" | rofi -dmenu -config $HOME/.config/rofi/clipboard.rasi -show-icons -markup-rows -display-columns 2 | cliphist decode | wl-copy

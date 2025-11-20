@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 full_path="$ZED_FILE"
 filename_ext=$(basename "$full_path")
@@ -10,51 +10,51 @@ echo "[running $filename_ext]"
 
 case "$extension" in
 py)
-  python3 "$full_path"
-  ;;
+    python3 "$full_path"
+    ;;
 js)
-  node "$full_path"
-  ;;
+    node "$full_path"
+    ;;
 ts)
-  ts-node "$full_path"
-  ;;
+    ts-node "$full_path"
+    ;;
 sh)
-  bash "$full_path"
-  ;;
+    bash "$full_path"
+    ;;
 rb)
-  ruby "$full_path"
-  ;;
+    ruby "$full_path"
+    ;;
 php)
-  php "$full_path"
-  ;;
+    php "$full_path"
+    ;;
 c)
-  gcc "$full_path" -o "/tmp/$filename" && "/tmp/$filename"
-  ;;
+    gcc "$full_path" -o "/tmp/$filename" && "/tmp/$filename"
+    ;;
 cpp)
-  g++ "$full_path" -o "/tmp/$filename" && "/tmp/$filename"
-  ;;
+    g++ "$full_path" -o "/tmp/$filename" && "/tmp/$filename"
+    ;;
 java)
-  javac "$full_path" && java -cp "$dir" "$filename"
-  ;;
+    javac "$full_path" && java -cp "$dir" "$filename"
+    ;;
 go)
-  go run "$full_path"
-  ;;
+    go run "$full_path"
+    ;;
 rs)
-  rustc "$full_path" -o "/tmp/$filename" && "/tmp/$filename"
-  ;;
+    rustc "$full_path" -o "/tmp/$filename" && "/tmp/$filename"
+    ;;
 lua)
-  lua "$full_path"
-  ;;
+    lua "$full_path"
+    ;;
 pl)
-  perl "$full_path"
-  ;;
+    perl "$full_path"
+    ;;
 swift)
-  swift "$full_path"
-  ;;
+    swift "$full_path"
+    ;;
 kt)
-  kotlinc "$full_path" -include-runtime -d "/tmp/$filename.jar" && java -jar "/tmp/$filename.jar"
-  ;;
+    kotlinc "$full_path" -include-runtime -d "/tmp/$filename.jar" && java -jar "/tmp/$filename.jar"
+    ;;
 *)
-  echo "[unsupported extension: .$extension]"
-  ;;
+    echo "[unsupported extension: .$extension]"
+    ;;
 esac

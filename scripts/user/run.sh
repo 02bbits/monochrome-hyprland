@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-  echo "Usage: runfile <file>"
-  exit 1
+    echo "Usage: runfile <file>"
+    exit 1
 fi
 
 full_path=$(realpath "$1" 2>/dev/null)
@@ -10,8 +10,8 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 if [ ! -f "$full_path" ]; then
-  echo "Error: File '$1' does not exist"
-  exit 1
+    echo "Error: File '$1' does not exist"
+    exit 1
 fi
 
 filename_ext=$(basename "$full_path")
@@ -19,7 +19,7 @@ filename="${filename_ext%.*}"
 extension="${filename_ext##*.}"
 dir=$(dirname "$full_path")
 
-echo -e "${RED}> [running $filename_ext]${NC}"
+echo -e "${RED}[running $filename_ext]${NC}"
 
 case "$extension" in
 py) python3 "$full_path" ;;

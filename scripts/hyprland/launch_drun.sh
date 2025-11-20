@@ -1,7 +1,12 @@
 #!/bin/bash
 
-if pgrep -x rofi; then
-  pkill rofi
+# Enter prefered dmenu
+menu=fuzzel
+
+if pgrep -x $menu; then
+    pkill $menu
 else
-  rofi -show drun -i
+    $menu
+    # for rofi
+    # $menu -show drun -i
 fi

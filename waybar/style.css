@@ -9,9 +9,8 @@
     text-shadow: none;
 }
 
-/* =======  Contenedor principal  ======= */
 window#waybar {
-    background: alpha(@surface_container_lowest, 0.89);
+    background: rgba(14,13,14,1);
     border-radius: 0px; /* contorno ligeramente menor */
 }
 

@@ -62,7 +62,7 @@ element {
 }
 
 element-icon {
-    size: 30px;
+    size: 50px;
     cursor: pointer;
 }
 

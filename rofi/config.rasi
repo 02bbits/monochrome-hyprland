@@ -8,6 +8,7 @@ configuration {
     drun-display-format: "{icon}{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
     location: 0;
     font: "Monospace 11";
+    terminal: "/usr/bin/ghostty";
 }
 
 window {
@@ -50,9 +51,9 @@ entry {
 listview {
     lines: 6;
     columns: 1;
-    fixed-height: false;
     spacing: 5px;
     background-color: transparent;
+    border-color: #161628;
 }
 
 element {
@@ -62,7 +63,7 @@ element {
 }
 
 element-icon {
-    size: 24px;
+    size: 25px;
     cursor: pointer;
 }
 
