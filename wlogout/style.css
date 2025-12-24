@@ -10,25 +10,25 @@ window {
 }
 
 button {
-	font-family: 'Material Symbols Outlined';
-	font-size: 10;
-	background-color: rgba(11, 11, 11, 0.86);
-	color: #FFFFFF;
+	font-family: 'JetBrainsMono Nerd Font';
+	font-size: 16;
+	background-color: rgba(2, 3, 5, 1);
+	color: #eeece3;
 	margin: 2rem;
 	border-radius: 30rem;
-    border-color: #cba6f7;
     text-decoration-color: #cdd6f4;
-    border-style: solid;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 25%;
+    background-size: 30%;
 }
 
 button:focus,
 button:active,
 button:hover {
-	background-color: rgba(51, 51, 51, 0.5);
+	background-color: #171617;
 	border-radius: 4rem;
+    /* border: 5px solid transparent; */
+    padding: 70px;
 }
 
 #lock {

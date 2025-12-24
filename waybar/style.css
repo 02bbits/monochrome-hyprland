@@ -10,8 +10,10 @@
 }
 
 window#waybar {
-    background: rgba(14,13,14,1);
-    border-radius: 0px; /* contorno ligeramente menor */
+    /* background-image: url("file:///home/bdora/texture.png"); */
+    background: rgba(2,3,5,1);
+    /* border-radius: 0 0 7 7; */
+    border: 2px solid rgba(45,38,50,1);
 }
 
 /* =======  Tooltip  ======= */
@@ -27,7 +29,8 @@ tooltip label {
 }
 
 /* =======  Ventana activa  ======= */
-#window {
+#window,
+#custom-username {
     margin: 0px 4px 2px 4px;
     padding: 2px 0px 2px 10px;
     background: transparent;
@@ -50,15 +53,18 @@ tooltip label {
 #custom-playerlabel,
 #custom-cava,
 #custom-notifications,
-#tray,
 #custom-theme-switcher,
 #power-profiles-daemon,
 #control-center {
-    margin: 6px 4px; /* 6 vertical, 4 horizontal  */
-    padding: 0px 8px;
-    background: alpha(@tertiary_container, 0.2);
+    background: alpha(@tertiary_container, 0.0);
     color: @on_tertiary_container;
     border-radius: 10px;
+    padding: 0 6 0 6;
+    margin: 0 3 0 3;
+}
+
+#tray {
+    background: transparent;
 }
 
 #power-profiles-daemon {
@@ -66,20 +72,17 @@ tooltip label {
 }
 
 #cpu {
-    background: #a6e3a1;
+    color: #a6e3a1;
 }
 
 #memory {
-    background: #f9e2af;
+    color: #f9e2af;
 }
 
 #disk {
-    background: #f38ba8;
+    color: #f38ba8;
 }
 
-#disk {
-    background: #f48fb1;
-}
 
 #custom-updates {
     background: #f48fb1;
@@ -102,7 +105,10 @@ tooltip label {
 }
 
 #power-profiles-daemon {
-    background: #a6e3a1;
+    background: transparent;
+    color: #81c8be;
+    margin: 0 5 0 5;
+    padding: 0 5 0 0;
 }
 
 #control-center {
@@ -140,33 +146,50 @@ tooltip label {
 
 #workspaces button {
     font-size: 20px;
-    margin: 0 4px;
-    padding: 0 0px;
+    margin: 0 0 8 0;
+    padding: 0 0 0 0;
     color: alpha(@on_secondary_container, 0.25);
     border-radius: 10px;
 }
 
+#workspaces button.empty {
+    margin: 0 0 14 0;
+    color: alpha(@on_secondary_container, 0.18);
+}
+
 #workspaces button.active {
-    margin: 0 4px;
-    background: alpha(@primary, 0);
     color: alpha(@primary, 1);
+    margin: 0 0 4 0;
+    padding: 0;
 }
 
 #workspaces button:hover,
 #workspaces button.urgent {
-    background: alpha(@background, 0.5);
     color: alpha(@primary, 1);
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 /* =======  Audio  ======= */
 #pulseaudio,
 #network,
 #bluetooth {
-    margin: 0 2px;
+    margin: 0 5 0 5;
     padding: 0 4px;
     background: alpha(@surface_container_highest, 0);
-    color: @on_tertiary_container;
     border-radius: 10px;
+}
+
+#pulseaudio {
+    color: #8caaee;
+}
+
+#network {
+    color: #ca9ee6;
+}
+
+#microphone {
+    color: #179299;
 }
 
 /* slider de volumen */
@@ -184,7 +207,6 @@ tooltip label {
 /* =======  Reloj  ======= */
 #clock {
     margin: 0px 4px 2px 4px;
-    padding: 0;
     background: alpha(@background, 0);
     border-radius: 10px;
     color: lighter(@main-color);
@@ -199,8 +221,9 @@ tooltip label {
 }
 
 #battery {
-    margin: 0px 4px 0px 4px;
-    padding: 0 8px;
+    margin: 0 5 0 5;
+    padding: 0 10 0 0;
+    color: @on_surface;
 }
 
 /* =======  Taskbar  ======= */
@@ -231,5 +254,11 @@ tooltip label {
 
 /* GROUP */
 #control-center {
-    background: #74c7ec;
+    background: transparent;
+}
+
+#system-info {
+    background-image: url("file:///home/bdora/stroke.jpg");
+    /* background: #ffffff; */
+    /* margin: 3 0 6 0; */
 }

@@ -8,9 +8,10 @@ dir=$(dirname "$full_path")
 
 echo "[running $filename_ext]"
 
+# source "$(pwd)/.venv/bin/activate" && python "$full_path" 
 case "$extension" in
 py)
-    python3 "$full_path"
+    python "$full_path"
     ;;
 js)
     node "$full_path"

@@ -6,7 +6,7 @@ DATA_FILE="$HOME/.config/scripts/hyprland/data/currentWallpaper"
 mapfile -t WALLS < <(find "$WALL_DIR" -type f \( -iname '*.jpg' -o -iname '*.png' -o -iname '*.gif' \) -printf "%f\n")
 
 # Let user pick one
-CHOICE=$(printf "%s\n" "${WALLS[@]}" | rofi -dmenu -p "Select Wallpaper" -i)
+CHOICE=$(printf "%s\n" "${WALLS[@]}" | fuzzel -d)
 [ -z "$CHOICE" ] && exit 1
 
 # Full path to chosen file
