@@ -1,11 +1,14 @@
-# hyprland-dots
-Generic Hyprland Rice
+# About
+A dark, monochrome (mostly) theme, _unorganized_ config
 
-# Features
-- Waybar (unfinished)
-- Nvim (near default config..)
-- Hyprland
-- Cava
-- Dunst
-- Rofi
-- Wlogout (Copied straight from Catppuccin repo) 
+# Components
+- waybar
+- nvim (near-default config.. idk why i put it here)
+- hyprland
+- cava
+- dunst
+- rofi
+- wlogout 
+
+# Installation Scripts
+Future plan
